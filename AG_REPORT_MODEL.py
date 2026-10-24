@@ -80,6 +80,7 @@ Well_Data_SRP_Null=int(Well_Data_SRP.isnull().sum().sum())
 
 
 
+
 Well_Data['HRS ONLINE']=Well_Data['HRS ONLINE'].astype(float)
 Well_Data_24=Well_Data[(Well_Data['HRS ONLINE']<24) & (Well_Data['STATUS']!='SI') ]
 Well_Data_24_Null=int(Well_Data_24['DOWNTIME CAUSEINPUT WILL BE BLUE IF CAUSE REQUIRED'].isnull().sum())
