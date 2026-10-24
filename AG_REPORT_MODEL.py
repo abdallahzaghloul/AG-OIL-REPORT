@@ -103,7 +103,7 @@ Well_Data_24_Null_Per=Well_Data_24_Null/Well_Data_24.shape[0]
 Well_Data_GL_Null_Per= Well_Data_GL_Null / (Well_Data_GL.shape[0] * Well_Data_GL.shape[1])
 Well_Data_SRP_Null_Per = Well_Data_SRP_Null / (Well_Data_SRP.shape[0] * Well_Data_SRP.shape[1])
 Well_Data_ESP_Null_Per = Well_Data_ESP_Null / (Well_Data_ESP.shape[0] * Well_Data_ESP.shape[1])
-Well_Data_Comp=100-(Well_Data_ESP_Null_Per+Well_Data_24_Null_Per+Well_Data_SRP_Null_Per+Well_Data_Other_Null_Per)*100
+Well_Data_Comp=100-(Well_Data_ESP_Null_Per+Well_Data_24_Null_Per+Well_Data_SRP_Null_Per+Well_Data_GL_Null_Per)*100
 
 
 
