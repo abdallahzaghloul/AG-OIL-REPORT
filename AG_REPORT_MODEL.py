@@ -108,9 +108,9 @@ Well_Data_Comp=100-(Well_Data_ESP_Null_Per+Well_Data_24_Null_Per+Well_Data_SRP_N
 
 
     
-WF_Data= pd.read_excel(URL, sheet_name="WATER FLOOD WELLS",usecols='B:S',skiprows=1, nrows=74)
+WF_Data= pd.read_excel(URL, sheet_name="WATER FLOOD WELLS",skiprows=1,usecols='B:R', nrows=42)
 WF_Data['HRS ONLINE']=WF_Data['HRS ONLINE'].astype(float)
-WF_Data=WF_Data.drop([0])
+
 
 WF_Data_INJ = WF_Data[WF_Data['STATUS']=='INJ']
 WF_Data_INJ = WF_Data_INJ.drop(columns=['DOWNTIME CAUSE'])
