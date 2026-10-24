@@ -76,7 +76,7 @@ Well_Data.index = range(1, len(Well_Data) + 1)
 
 
 Well_Data_SRP = Well_Data[Well_Data['STATUS']=="SRP"]
-Well_Data_SRP=Well_Data_SRP.drop(columns=['LIFT GAS MMSCF/D','ESP TYPE','HZ','UNNAMED: 27', 'UNNAMED: 28','UNNAMED: 29', 'HZ', 'EST GAS PRODN'])
+Well_Data_SRP=Well_Data_SRP.drop(columns=['LIFT GAS MMSCF/D','ESP TYPE','HZ','UNNAMED: 27', 'UNNAMED: 28','UNNAMED: 29', 'HZ','COMMENTS'])
 Well_Data_SRP_Null=int(Well_Data_SRP.isnull().sum().sum())
 
 
@@ -95,7 +95,7 @@ Well_Data_ESP_Null=int(Well_Data_ESP.isnull().sum().sum())
 
 Well_Data_GL = Well_Data[(Well_Data['STATUS']=="G/L")] 
 Well_Data_GL=Well_Data_GL.drop(columns=['LIFT GAS MMSCF/D','LAST FLUID LEVELS', 'UNNAMED: 15',
-       'UNNAMED: 16', 'PUMP DEPTH', 'DAILY SAM DATA', 'UNNAMED: 19','UNNAMED: 20', 'SUCKER ROD PUMP DATA', 'UNNAMED: 22', 'UNNAMED: 23','UNNAMED: 24', 'UNNAMED: 25', 'ESP TYPE', 'UNNAMED: 27', 'UNNAMED: 28','UNNAMED: 29', 'HZ', 'EST GAS PRODN'])
+       'UNNAMED: 16', 'PUMP DEPTH', 'DAILY SAM DATA', 'UNNAMED: 19','UNNAMED: 20', 'SUCKER ROD PUMP DATA', 'UNNAMED: 22', 'UNNAMED: 23','UNNAMED: 24', 'UNNAMED: 25', 'ESP TYPE', 'UNNAMED: 27', 'UNNAMED: 28','UNNAMED: 29', 'HZ','COMMENTS'])
 Well_Data_GL_Null=int(Well_Data_GL.isnull().sum().sum())
 
 
