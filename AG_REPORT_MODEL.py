@@ -30,7 +30,7 @@ with col1:
 Deduction = []
 
 
-if st.button("Default RAZZAK Report Dates"):    
+if st.button("Default AG Report Dates"):    
     URL = "AG_OIL_REPORT_"+Today_Report+'.xlsx'
     url = "AG_OIL_REPORT_"+YT_Report+'.xlsx'
 
@@ -46,7 +46,7 @@ End_Date =End_Date.replace('-','_')
 #URL = "RAZZAK_OIL_REPORT_"+End_Date+'.xlsx'
 
 
-if st.button("Selective RAZZAK Report Dates"):
+if st.button("Selective AG Report Dates"):
     URL = "RAZZAK_OIL_REPORT_"+End_Date+'.xlsx'
     url = "RAZZAK_OIL_REPORT_"+Start_Date+'.xlsx'
 
