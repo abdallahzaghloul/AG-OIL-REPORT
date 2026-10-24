@@ -34,16 +34,12 @@ if st.button("Default AG Report Dates"):
     URL = "AG_OIL_REPORT_"+Today_Report+'.xlsx'
     url = "AG_OIL_REPORT_"+YT_Report+'.xlsx'
 
-
-
-
 Start_Date = st.text_input("Enter Start Date [30-08-2025]")
 Start_Date =Start_Date.replace('-','_') 
 
 
 End_Date = st.text_input("Enter End Date [31-08-2025]")
 End_Date =End_Date.replace('-','_')
-#URL = "RAZZAK_OIL_REPORT_"+End_Date+'.xlsx'
 
 
 if st.button("Selective AG Report Dates"):
