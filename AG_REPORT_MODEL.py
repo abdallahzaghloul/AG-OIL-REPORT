@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np 
 import streamlit as st
 import matplotlib.pyplot as plt
-st.set_page_config(page_title="RZAZZAK REPORT ",page_icon="🛢️",)
+st.set_page_config(page_title="AG REPORT ",page_icon="🛢️",)
 import pandas as pd 
 
 
@@ -31,8 +31,8 @@ Deduction = []
 
 
 if st.button("Default RAZZAK Report Dates"):    
-    URL = "RAZZAK_OIL_REPORT_"+Today_Report+'.xlsx'
-    url = "RAZZAK_OIL_REPORT_"+YT_Report+'.xlsx'
+    URL = "AG_OIL_REPORT_"+Today_Report+'.xlsx'
+    url = "AG_OIL_REPORT_"+YT_Report+'.xlsx'
 
 
 
