@@ -93,22 +93,14 @@ Well_Data_ESP=Well_Data_ESP.drop(columns=['LIFT GAS MMSCF/D','DAILY SAM DATA', '
 Well_Data_ESP_Null=int(Well_Data_ESP.isnull().sum().sum())
 
 
-Well_Data_GL = Well_Data[(Well_Data['STATUS']!="ESP") & (Well_Data['STATUS']!="SRP")&(Well_Data['STATUS']!="SI") ]
-Well_Data_GL=Well_Data_Other.drop(columns=['UNNAMED: 19','UNNAMED: 37','DOWNTIME CAUSEINPUT WILL BE BLUE IF CAUSE REQUIRED','FLUID LEVELS', 'UNNAMED: 16', 'UNNAMED: 17', 'UNNAMED: 18',
-       'UNNAMED: 19', 'PUMP DEPTH', 'PUMP SIZE "', 'DAILY SAM DATA',
-       'UNNAMED: 23', 'UNNAMED: 24', 'UNNAMED: 25', 'SUCKER ROD PUMP DATA',
-       'UNNAMED: 27', 'UNNAMED: 28', 'UNNAMED: 29','AMPS', 'HZ', 'MOTOR RATING AMP','WELL TYPE', 'MOTOR LOADING PERCENTAGE','EST PRODN'])
-Well_Data_Other_Null=int(Well_Data_Other.isnull().sum().sum())
-
-
-
-
-
-
+Well_Data_GL = Well_Data[(Well_Data['STATUS']=="G/L")] 
+Well_Data_GL=Well_Data_GL.drop(columns=['LIFT GAS MMSCF/D','LAST FLUID LEVELS', 'UNNAMED: 15',
+       'UNNAMED: 16', 'PUMP DEPTH', 'DAILY SAM DATA', 'UNNAMED: 19','UNNAMED: 20', 'SUCKER ROD PUMP DATA', 'UNNAMED: 22', 'UNNAMED: 23','UNNAMED: 24', 'UNNAMED: 25', 'ESP TYPE', 'UNNAMED: 27', 'UNNAMED: 28','UNNAMED: 29', 'HZ', 'EST GAS PRODN'])
+Well_Data_Other_Null=int(Well_Data_GL.isnull().sum().sum())
 
 
 Well_Data_24_Null_Per=Well_Data_24_Null/Well_Data_24.shape[0]
-Well_Data_Other_Null_Per= Well_Data_Other_Null / (Well_Data_Other.shape[0] * Well_Data_Other.shape[1])
+Well_Data_GL_Null_Per= Well_Data_GL_Null / (Well_Data_GL.shape[0] * Well_Data_GL.shape[1])
 Well_Data_SRP_Null_Per = Well_Data_SRP_Null / (Well_Data_SRP.shape[0] * Well_Data_SRP.shape[1])
 Well_Data_ESP_Null_Per = Well_Data_ESP_Null / (Well_Data_ESP.shape[0] * Well_Data_ESP.shape[1])
 Well_Data_Comp=100-(Well_Data_ESP_Null_Per+Well_Data_24_Null_Per+Well_Data_SRP_Null_Per+Well_Data_Other_Null_Per)*100
