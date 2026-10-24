@@ -30,22 +30,23 @@ with col1:
 Deduction = []
 
 
-if st.button("Default AG Report Dates"):    
-    URL = "AG_OIL_REPORT_"+Today_Report+'.xlsx'
-    url = "AG_OIL_REPORT_"+YT_Report+'.xlsx'
+#if st.button("Default AG Report Dates"):    
+#    URL = "AG_OIL_REPORT_"+Today_Report+'.xlsx'
+#    url = "AG_OIL_REPORT_"+YT_Report+'.xlsx'
 
-Start_Date = st.text_input("Enter Start Date [30-08-2025]")
-Start_Date =Start_Date.replace('-','_') 
-
-
-End_Date = st.text_input("Enter End Date [31-08-2025]")
-End_Date =End_Date.replace('-','_')
+#Start_Date = st.text_input("Enter Start Date [30-08-2025]")
+#Start_Date =Start_Date.replace('-','_') 
 
 
-if st.button("Selective AG Report Dates"):
-    URL = "AG_OIL_REPORT_"+End_Date+'.xlsx'
-    url = "AG_OIL_REPORT_"+Start_Date+'.xlsx'
+#End_Date = st.text_input("Enter End Date [31-08-2025]")
+#End_Date =End_Date.replace('-','_')
 
+
+#if st.button("Selective AG Report Dates"):
+#    URL = "AG_OIL_REPORT_"+End_Date+'.xlsx'
+#    url = "AG_OIL_REPORT_"+Start_Date+'.xlsx'
+URL = "AG_OIL_REPORT_04_10_26.xlsx"
+url = "AG_OIL_REPORT_03_10_26.xlsx"
 
 AG_File=pd.ExcelFile(URL)
 Excel_Sheets=AG_File.sheet_names
