@@ -51,8 +51,8 @@ if st.button("Selective AG Report Dates"):
     url = "AG_OIL_REPORT_"+Start_Date+'.xlsx'
 
 
-RAZZAK_File=pd.ExcelFile(URL)
-Excel_Sheets=RAZZAK_File.sheet_names
+AG_File=pd.ExcelFile(URL)
+Excel_Sheets=AG_File.sheet_names
 Sheet_Check_List=[]
 for i in range (1,len(Excel_Sheets)):
   try:
