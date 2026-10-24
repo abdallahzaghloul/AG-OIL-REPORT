@@ -99,6 +99,12 @@ Well_Data_GL=Well_Data_GL.drop(columns=['LIFT GAS MMSCF/D','LAST FLUID LEVELS', 
 Well_Data_GL_Null=int(Well_Data_GL.isnull().sum().sum())
 
 
+#Well_Data_NF = Well_Data[(Well_Data['STATUS']=="NF")] 
+#Well_Data_GL=Well_Data_GL.drop(columns=['LIFT GAS MMSCF/D','LAST FLUID LEVELS', 'UNNAMED: 15',
+       'UNNAMED: 16', 'PUMP DEPTH', 'DAILY SAM DATA', 'UNNAMED: 19','UNNAMED: 20', 'SUCKER ROD PUMP DATA', 'UNNAMED: 22', 'UNNAMED: 23','UNNAMED: 24', 'UNNAMED: 25', 'ESP TYPE', 'UNNAMED: 27', 'UNNAMED: 28','UNNAMED: 29', 'HZ','COMMENTS'])
+#Well_Data_GL_Null=int(Well_Data_GL.isnull().sum().sum())
+
+
 Well_Data_24_Null_Per=Well_Data_24_Null/Well_Data_24.shape[0]
 Well_Data_GL_Null_Per= Well_Data_GL_Null / (Well_Data_GL.shape[0] * Well_Data_GL.shape[1])
 Well_Data_SRP_Null_Per = Well_Data_SRP_Null / (Well_Data_SRP.shape[0] * Well_Data_SRP.shape[1])
@@ -127,7 +133,7 @@ WF_Data_INJ_Null_Per = WF_Data_INJ_Null/ (WF_Data_INJ.shape[0]*WF_Data_INJ.shape
 WF_Comp = 100-(WF_Data_INJ_Null_Per+WF_Data_24_Null_Per)*100
 
 
-st.markdown(" <center>  <h1> RAZZAZK OIL REPORT ANALYSIS </h1> </font> </center> </h1> ",
+st.markdown(" <center>  <h1> AG OIL REPORT ANALYSIS </h1> </font> </center> </h1> ",
             unsafe_allow_html=True)
 
 
